@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+:root {
+    --primary-color: #010712;
+    --secondary-color: #d6d6d6;
+    --bg-color: #FCFDFD;
+    --h1-color: #3F444C;
+    --section-bg: #f4f4f4;
+    --text-color: #021f2a;
+    --text-color-1: #021f2a;
+    --bg-color: #fff;
+}
+
+
+.dark-it{
+    --text-color: #fff;
+    --text-color-1: #d39668;
+    --bg-color: #021f2a;
+    --primary-color: #f3ceb2;
+}
+
+.contact{
+    height: 100vh;
+}
+
+.heading{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#contact .heading h2{
+    width: 20%;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--text-color-1);
+    border-bottom: 2px solid var(--text-color-1);
+    margin-bottom: 2rem;
+}
+  
+.contact-container{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    background: var(--bg-color);
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: grid;
+    box-shadow: 1px 1px 9px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: 70%;
+    height: 60vh;
+    padding: 1em 2em;
+}
+
+input, textarea{
+    border-radius: 3px;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+    height: 10vh;
+}
+
+.label-title {
+    margin-top: 20px;
+}
+
+.send {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.error {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: oblique;
+    color: red;
+}
+
+.toast {
+    top: 200px;
+    right: 10px;
+}
+
+@media (max-width:768px) {
+    #contact .heading h2 {
+        width: 30%;
+    }
+    form {
+        width: 80%;
+        height: 50vh;
+    }
+    .input{
+        height: 30px;
+    }
+}
+
+@media (max-width: 400px){
+    #contact .heading h2 {
+        width: 55%;
+    }
+
+    .contact-container{
+        height: 60vh;
+    }
+
+    form {
+        width: 95%;
+        height: 55vh;
+    }
+
+    .label-title {
+        margin-top: 16px;
+    }
+
+    .error {
+        font-size: 12px;
+    }
+
+    textarea {
+        height: 6vh;
+    }
+
+    .send {
+        margin-bottom: 2.5em;
+    }
+
+}
+
+@media (max-width: 370px){
+    form {
+        width: 90%;
+        height: 55vh;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    textarea {
+        height: 8vh;
+    }
+
+    .send {
+        margin-top: 20px;
+    }
+
+}

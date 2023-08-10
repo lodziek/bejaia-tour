@@ -1,0 +1,42 @@
+.place-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    gap: 2em;
+}
+
+.text {
+    text-align: justify;
+}
+
+.place-heading {
+    width: 50%;
+    margin: 3.5em auto;
+    text-align: center;
+}
+
+.place-btn {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pl-icon {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .place-heading {
+        width: 100%;
+    }
+    .place-btn {
+        width: 35%;
+    }
+}
+
+@media (max-width: 400px) {
+    .place-btn {
+        width: 55%;
+    }
+}

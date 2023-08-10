@@ -1,0 +1,237 @@
+/* --------------- Google fonts link -------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+
+/* --------------- Color Variables ------------------ */
+
+:root {
+    --text-color: #021f2a;
+    --bg-color: #fff;
+    --txt-shadow: #8a8a8a;
+}
+
+/* --------------- Scroll Bar ---------------------- */
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--text-color);
+    border-radius: 5rem;
+}
+
+/* ---------------- Logo ----------------- */
+
+.logo {
+    font-family: 'The Nautigal', cursive;
+    font-size: 1.9rem;
+    font-weight: 400;
+    font-style: oblique;
+    color: var(--bg-color);
+    text-shadow: 2px 1px 2px var(--txt-shadow);
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.logo:hover {
+    color: #ff7016;
+}
+
+/* ---------------- nav-menu ----------------*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    transition: 0.5s;
+    overflow-x: hidden;
+    background: #021f2a;
+}
+
+.navbar.shadow {
+    background: var(--bg-color);
+    box-shadow: 0 0 4px rgb(14 55 54 / 0.15);
+}
+
+.navbar.shadow .logo {
+    color: var(--text-color);
+}
+
+.navbar.shadow .dark {
+    color: var(--text-color);
+}
+
+.navbar.shadow .nav-menu a {
+    color: var(--text-color);
+}
+
+.navbar.shadow .nav-menu a::after {
+    background: var(--text-color);
+}
+
+.nav-menu {
+    display: flex;
+    column-gap: 4rem;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--bg-color);
+    letter-spacing: 2px;
+}
+
+.nav-link::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--bg-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.6s;
+}
+
+.nav-lik:hover::after{
+    width: 100%;
+}
+
+.dark {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: var(--bg-color);
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all .3s ease-in-out;
+    background-color: var(--bg-color);
+    border-radius: 2px;
+}
+
+@media(max-width:916px){
+    .nav-menu{
+        column-gap: 2rem;
+    }
+
+    .navbar{
+        padding: 20px 65px;
+    }
+}
+
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+
+    .navbar{
+        padding: 20px 35px;
+        z-index: 1000;
+    }
+
+    .dark {
+        right: 95px;
+    }
+
+    .hamburger.close .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.close .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.close .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        background: #021f2aec;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        top: 78px;
+        text-align: center;
+        transition: .5s;
+        z-index: -1;
+        right: 0;
+        transform: translateX(100%);
+    }
+    
+    .nav-menu.active {
+        transform: none;
+    }
+    
+    .nav-item {
+        margin: 30px 0 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--txt-shadow);
+    }
+    
+    .nav-link {
+        letter-spacing: 4px;         
+    }
+
+    .nav-link:hover{
+        background: #ffffff8f;
+        color: var(--text-color);
+    }
+}
+
+@media(max-width:400px){
+    body {
+        width: 100%;
+    }
+
+    section {
+        padding: 50px 60px;
+    }
+
+    .navbar{
+        padding: 20px 30px;
+    }
+
+    .dark {
+        right: 80px;
+    }
+}

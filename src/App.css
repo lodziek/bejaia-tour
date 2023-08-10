@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+
+:root{
+    --text-color: #021f2a;
+    --bg-color: #fff;
+}
+
+
+
+section {
+    padding: 100px 100px;
+}
+
+/* ----------- Button  ------------------ */
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.3rem;
+    background: var(--text-color);
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    color: var(--bg-color);
+}
+
+.btn:hover {
+    opacity: 0.8;
+
+}
+

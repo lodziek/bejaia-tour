@@ -1,0 +1,47 @@
+:root{
+    --text-color: #021f2a;
+    --bg-color: #fff;
+    --section-bg: #f4f4f4;
+}
+
+.dark-it{
+    --text-color: #fff;
+    --bg-color: #021f2a;
+    --section-bg: #021f2a;
+}
+
+/* ---------------- videos Section ---------------------- */
+
+#videos{
+    background: var(--section-bg);
+}
+
+.video-container{
+    display: grid;
+    place-items: center;
+    margin-top: 3rem;
+}
+
+.video-container video{
+    width: 800px;
+}
+
+@media(max-width: 991px){
+    .video-container video{
+        width: 100%;
+    }
+}
+
+@media(max-width: 660px){
+    section{
+        padding: 50px 8%; 
+    }
+
+    .video-container video{
+        width: 100%;
+    }
+
+    .video-container {
+        width: 100%;
+    }
+}
