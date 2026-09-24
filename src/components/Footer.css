@@ -1,0 +1,80 @@
+.footer {
+    background: #0b2530;
+    color: #c9d8da;
+    padding-top: clamp(56px, 8vw, 88px);
+    font-size: .93rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.footer .logo {
+    color: #fff;
+    margin-bottom: 1rem;
+    display: inline-flex;
+}
+
+.footer-brand p {
+    max-width: 34ch;
+    color: #9fb5b9;
+}
+
+.footer-github {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1.25rem;
+    color: #fff;
+}
+
+.footer h3 {
+    font-family: var(--font-body);
+    font-size: .78rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #e39a72;
+    margin-bottom: 1rem;
+}
+
+.footer li + li {
+    margin-top: .55rem;
+}
+
+.footer li a {
+    transition: color .2s;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-top: clamp(40px, 6vw, 64px);
+    padding-block: 1.5rem;
+    border-top: 1px solid rgb(255 255 255 / .12);
+    color: #7f989d;
+    font-size: .85rem;
+}
+
+.footer-bottom a {
+    color: #c9d8da;
+}
+
+@media (max-width: 820px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
