@@ -51,7 +51,7 @@ const Footer = () => (
         </div>
 
         <div className="container footer-bottom">
-            <p>© {new Date().getFullYear()} Béjaïa Tour</p>
+            <p>© 2022 Béjaïa Tour</p>
             <p>
                 Designed by BiBi &amp;{' '}
                 <a href="https://github.com/lodziek" target="_blank" rel="noreferrer">AHMED ZAID Aghiles</a>

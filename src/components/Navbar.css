@@ -29,6 +29,12 @@
     opacity: 0;
 }
 
+/* Over the home hero the logo would sit on the headline: hide it until the bar turns solid. */
+.navbar.is-transparent .logo {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .navbar-inner {
     display: flex;
     align-items: center;
@@ -41,6 +47,7 @@
     flex-direction: column;
     line-height: 1;
     margin-right: auto;
+    transition: opacity .3s, visibility .3s;
 }
 
 .logo-mark {
